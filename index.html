@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>code paglu</title>
+</head>
+<body>
+    <pre>
+# Swap two numbers using third variable
+
+a = int(input("Enter the value of a:"))
+b = int(input("Enter the value of b:"))
+
+print("The values before swapping:")
+print("a=", a, "b=", b)
+
+temp = a
+a = b
+b = temp
+
+print("The values after swapping:")
+print("a=", a, "b=", b)
+
+<hr>
+
+# Arithmetic operation
+
+a = int(input("Enter the first number:"))
+b = int(input("Enter the second number:"))
+
+print("The addition of the given number=", a + b)
+print("The Subtraction of the given number=", a - b)
+print("The Multiplication of the given number=", a * b)
+print("The Floor division/Quotient of the given number=", a / b)
+print("The Remainder of the given number=", a % b)
+
+<hr>
+
+# Area and perimeter of a rectangle
+
+l = float(input("Enter the length of the rectangle:"))
+w = float(input("Enter the width of the rectangle:"))
+
+area = l * w
+perimeter = 2 * (l + w)
+
+print("Area of the rectangle=", area)
+print("Perimeter of the rectangle=", perimeter)
+
+<hr>
+
+# Simple Interest
+
+p = float(input("Enter the Principal amount:"))
+r = float(input("Enter the Rate of Interest per annum:"))
+t = float(input("Enter the time in years:"))
+
+SI = p * r * t / 100
+AP = p + SI
+
+print("simple Interest=", SI)
+print("Amount Payable=", AP)
+
+<hr>
+
+# Largest of three numbers
+
+num1 = int(input("Enter the first number:"))
+num2 = int(input("Enter the second number:"))
+num3 = int(input("Enter the third number:"))
+
+largest = num1
+
+if num2 > largest:
+    largest = num2
+
+if num3 > largest:
+    largest = num3
+
+print("The largest number is:", largest)
+
+<hr>
+
+# Driving licence eligibility
+
+name = input("Enter the user's name:")
+age = int(input("Enter the user's age:"))
+
+if age >= 18:
+    print("Hi", name, "You are eligible to vote")
+else:
+    print("Hi", name, "You are not eligible to vote")
+
+<hr>
+
+# Print minimum and maximum of five numbers
+
+num1 = int(input("Enter the first number:"))
+num2 = int(input("Enter the second number:"))
+num3 = int(input("Enter the third number:"))
+num4 = int(input("Enter the fourth number:"))
+num5 = int(input("Enter the fifth number:"))
+
+min = num1
+max = num1
+
+if num2 < min:
+    min = num2
+elif num2 > max:
+    max = num2
+
+if num3 < min:
+    min = num3
+elif num3 > max:
+    max = num3
+
+if num4 < min:
+    min = num4
+elif num4 > max:
+    max = num4
+
+if num5 < min:
+    min = num5
+elif num5 > max:
+    max = num5
+
+print("Maximum number:", max)
+print("Minimum number:", min)
+
+<hr>
+
+# Grade
+
+percentage = float(input("Enter the percentage of marks:"))
+
+if percentage > 90:
+    grade = 'A'
+elif percentage >= 80:
+    grade = 'B'
+elif percentage >= 70:
+    grade = 'C'
+elif percentage >= 60:
+    grade = 'D'
+else:
+    grade = 'E'
+
+print("The Grade for the given percentage is:", grade)
+
+<hr>
+
+# Table
+
+def table(number):
+    for i in range(1, 11):
+        result = number * i
+        print(number, "x", i, "=", result)
+
+number = int(input("Enter the number to print the table:"))
+table(number)
+
+<hr>
+
+# Sum of digits
+
+n = int(input("Enter an integer number:"))
+sum = 0
+
+while n > 0:
+    digit = n % 10
+    sum = sum + digit
+    n = int(n // 10)
+
+print("Sum of the digits =", sum)
+
+<hr>
+
+# Palindrome
+
+n = int(input("Enter the number:"))
+
+rev = 0
+num = n
+
+while num > 0:
+    rem = num % 10
+    num = int(num / 10)
+    rev = rev * 10 + rem
+
+if n == rev:
+    print(n, "is a palindrome")
+else:
+    print(n, "is not a palindrome")
+
+<hr>
+
+# PATTERN
+
+rows = 5
+
+for i in range(rows, 0, -1):
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()
+
+<hr>
+
+# Function add_prefix
+
+def add_prefix(name, gender):
+    if gender == 'M' or gender == 'm':
+        return "Mr. " + name
+    elif gender == 'F' or gender == 'f':
+        return "Ms. " + name
+    else:
+        return "Please enter the gender correctly"
+
+name = input("Enter your name:")
+gender = input("Enter your Gender M/F:")
+
+result = add_prefix(name, gender)
+
+print("Hi " + result)
+
+<hr>
+
+# Quadratic equation
+
+def quadratic():
+    a = float(input("Enter the value of a:"))
+    b = float(input("Enter the value of b:"))
+    c = float(input("Enter the value of c:"))
+
+    dis = b**2 - 4*a*c
+
+    print("Discriminant=", dis)
+
+    if dis > 0:
+        print("The quadratic equation has two distinct real roots")
+    elif dis == 0:
+        print("The quadratic equation has one real root")
+    else:
+        print("The quadratic equation has zero real roots")
+
+quadratic()
+
+<hr>
+
+# Swapping using function
+
+def swap(num1, num2):
+    if num1 < num2:
+        return num2, num1
+    else:
+        return num1, num2
+
+number1 = int(input("Enter the value for number1:"))
+number2 = int(input("Enter the value for number2:"))
+
+result1, result2 = swap(number1, number2)
+
+print("Original numbers: number1=", number1, "number2=", number2)
+print("After swapping: number1=", result1, "number2=", result2)
+
+<hr>
+
+# Count characters
+
+a = input("Enter the text:")
+
+print("No of chars:", len(a))
+
+alpha = digit = space = spl = 0
+
+for i in range(len(a)):
+    if a[i].isalpha():
+        alpha += 1
+    elif a[i].isdigit():
+        digit += 1
+    elif a[i].isspace():
+        space += 1
+    else:
+        spl += 1
+
+print("no of alphabets:", alpha)
+print("no of digits:", digit)
+print("no of words:", space + 1)
+print("no of special symbols:", spl)
+
+def convert(a):
+    if " " in a:
+        b = a.split(" ")
+        if len(b) > 1:
+            print(a.title())
+        else:
+            print("One word")
+
+text = input("Enter the text:")
+convert(text)
+
+<hr>
+
+# Replace space with hyphen
+
+def replace(a):
+    return a.replace(" ", "-")
+
+text = input("Enter the sentence:")
+result = replace(text)
+
+print("Entered text is", text)
+print("Replacing text is", result)
+
+<hr>
+
+# Occurrence
+
+list1 = eval(input("Enter the elements:"))
+num = int(input("Enter the element to check the number of times occured in the list:"))
+
+if num in list1:
+    print(num, "is present", list1.count(num), "number of times")
+else:
+    print(num, "is not present in the list")
+
+<hr>
+
+# largest in list
+
+def largest(list1):
+    largest = max(list1)
+    return largest
+
+L = eval(input("Enter the elements:"))
+print("The largest element in the given list is", largest(L))
+
+<hr>
+
+# modify list remove duplicates
+
+Lst = eval(input("Enter a list:"))
+Lst1 = []
+
+for i in Lst:
+    if i not in Lst1:
+        Lst1.append(i)
+
+print("list without duplicate elements", Lst1)
+
+<hr>
+
+# Email separation
+
+emails = tuple()
+username = tuple()
+domainname = tuple()
+
+n = int(input("How many email ids you want to enter?: "))
+
+for i in range(0, n):
+    emid = input(">")
+    emails = emails + (emid,)
+    spl = emid.split("@")
+    username = username + (spl[0],)
+    domainname = domainname + (spl[1],)
+
+print("\nThe email ids in the tuple are:")
+print(emails)
+
+print("\nThe username in the email ids are:")
+print(username)
+
+print("\nThe domain name in the email ids are:")
+print(domainname)
+
+<hr>
+
+# Name search in tuple
+
+name = tuple()
+n = int(input("How many names do you want to enter?: "))
+
+for i in range(0, n):
+    num = input(">")
+    name = name + (num,)
+
+print("\nThe names entered in the tuple are:")
+print(name)
+
+search = input("\nEnter the name of the student you want to search: ")
+
+if search in name:
+    print("The name", search, "is present in the tuple")
+else:
+    print("The name", search, "is not found in the tuple")
+
+<hr>
+
+# Frequency of characters
+
+st = input("Enter a string: ")
+
+dic = {}
+
+for ch in st:
+    if ch in dic:
+        dic[ch] += 1
+    else:
+        dic[ch] = 1
+
+for key in dic:
+    print(key, ':', dic[key])
+
+<hr>
+
+# Dictionary student marks
+
+d = {}
+i = 1
+n = int(input("Enter number of entries:"))
+
+while i <= n:
+    rno = int(input("Enter the roll no:"))
+    name = input("Enter the name:")
+    cl = input("Enter the class:")
+    marks = int(input("Enter the marks:"))
+    l = [name, marks]
+    d[rno] = l
+    i = i + 1
+
+print("The entries are", d)
+
+found = False
+
+for key in d:
+    if d[key][1] > 75:
+        print("Above 75% Students is/are", d[key])
+        found = True
+
+if not found:
+    print("None got 75% marks")
+<hr>
+    </pre>
+</body>
+</html>
